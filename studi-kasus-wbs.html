@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Studi Kasus: Sistem Digitalisasi Stok — PT WBS</title>
-  <meta name="description" content="Analisis sistem digitalisasi stok untuk reseller alat kesehatan B2B: temuan data, peta risiko, dan rencana implementasi bertahap." />
+  <title>Studi Kasus: Digitalisasi Stok PT WBS — Avatar Putra Sigit</title>
+  <meta name="description" content="Studi kasus konsultasi sistem digitalisasi stok untuk PT Weleri Bersaudara Semesta — analisis data 5 bulan, risk mapping, dan roadmap solusi bertahap." />
   <link rel="stylesheet" href="style.css" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 </head>
@@ -16,7 +16,7 @@
       <div class="nav-links">
         <a href="index.html">Beranda</a>
         <a href="tentang.html">Tentang</a>
-        <a href="studi-kasus-wbs.html" class="active">Studi Kasus</a>
+        <a href="studi-kasus-wbs.html" class="active">Studi Kasus PT WBS</a>
       </div>
     </nav>
   </header>
@@ -24,42 +24,63 @@
   <div class="page-head">
     <div class="container">
       <div class="breadcrumb"><a href="index.html">Beranda</a> / Studi Kasus</div>
-      <h1>Studi Kasus: Sistem Digitalisasi Stok</h1>
-      <p>Reseller alat kesehatan diagnostik B2B &middot; Analisis 5 bulan &middot; Juli 2026</p>
+      <h1>Studi Kasus: Digitalisasi Stok PT WBS</h1>
+      <p>Analisis sistem &amp; digitalisasi untuk reseller alat kesehatan B2B &middot; Juli 2026</p>
     </div>
   </div>
 
   <main>
-    <!-- 1. Ringkasan -->
+    <!-- 0. Badge Klien -->
+    <section style="padding-bottom: 0;">
+      <div class="container">
+        <div class="card" style="background: linear-gradient(135deg, #14315a, #0f2544); color: #fff; text-align: center;">
+          <p style="margin: 0; font-size: .95rem;">
+            <strong style="color: #c9a227;">Klien:</strong> PT Weleri Bersaudara Semesta &nbsp;|&nbsp;
+            <strong style="color: #c9a227;">Industri:</strong> Reseller Alat Kesehatan Diagnostik &nbsp;|&nbsp;
+            <strong style="color: #c9a227;">Scope:</strong> Analisis Stok + Sistem Digitalisasi
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 1. Profil Klien -->
     <section>
       <div class="container">
-        <div class="section-label">01 &middot; Ringkasan</div>
-        <h2>Latar Belakang & Tujuan</h2>
+        <div class="section-label">01 &middot; Profil Klien</div>
+        <h2>PT Weleri Bersaudara Semesta</h2>
         <p class="lead">
-          PT WBS adalah perusahaan reseller alat kesehatan diagnostik B2B yang mengelola
-          <strong>~60&ndash;64 jenis item</strong> dengan nilai stok rata-rata
-          <strong>Rp 150&ndash;230 juta per periode</strong>. Pencatatan stok masih menggunakan
-          spreadsheet manual tanpa sistem notifikasi otomatis.
-        </p>
-        <p>
-          Analisis ini dilakukan atas data stok 5 bulan (Januari&ndash;Mei 2026) untuk memetakan
-          risiko operasional dan merancang solusi sistem digital yang realistis, bertahap,
-          dan berbasis data nyata.
+          Perusahaan reseller alat kesehatan diagnostik B2B yang mengelola <strong>60+ jenis produk</strong>
+          dengan nilai stok rata-rata <strong>Rp 200 juta per periode</strong>. Menganalisis data stok
+          5 bulan (Jan&ndash;Mei 2026) untuk memetakan risiko dan merancang solusi sistem digital.
         </p>
 
         <div class="grid grid-3" style="margin-top: 22px;">
+          <div class="card stat-card">
+            <span class="stat-num">60<span class="stat-unit">+</span></span>
+            <p class="stat-label">Jenis Produk Diinventory</p>
+          </div>
           <div class="card stat-card">
             <span class="stat-num">Rp 200<span class="stat-unit">jt</span></span>
             <p class="stat-label">Nilai Stok Rata-rata/Periode</p>
           </div>
           <div class="card stat-card">
-            <span class="stat-num">60<span class="stat-unit">+</span></span>
-            <p class="stat-label">Jenis Item Diinventory</p>
-          </div>
-          <div class="card stat-card">
             <span class="stat-num">60.7<span class="stat-unit">%</span></span>
             <p class="stat-label">Inventory = Rapid Test Kit (expiry-sensitive)</p>
           </div>
+        </div>
+
+        <div class="table-wrap" style="margin-top: 24px;">
+          <table class="data">
+            <tbody>
+              <tr><th style="width: 30%;">Nama</th><td>PT Weleri Bersaudara Semesta (PT WBS)</td></tr>
+              <tr><th>Jenis Usaha</th><td>Reseller alat kesehatan diagnostik</td></tr>
+              <tr><th>Produk Utama</th><td>Rapid test kit (HIV, Hepatitis B/C, Sifilis, Malaria), consumable laboratorium</td></tr>
+              <tr><th>Merk Dagang</th><td>Orient Gene, Wondfo, Answer, Oncocorobe, Alkessi, Bio Aid</td></tr>
+              <tr><th>Segmen Klien</th><td>Rumah sakit, klinik, apotek &mdash; model B2B</td></tr>
+              <tr><th>Status Legal</th><td>PT &mdash; Terverifikasi Kemenkumham</td></tr>
+              <tr><th>Lokasi</th><td>Jakarta Selatan</td></tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </section>
@@ -80,21 +101,15 @@
             <canvas id="stokChart"></canvas>
           </div>
           <p class="chart-note">
-            Penurunan tajam Januari &rarr; Februari (-43%) diikuti kenaikan Mar-Apr (+55%),
-            lalu kembali turun Mei (-16%). Pola ini menunjukkan pembelian stok reaktif, bukan proaktif.
+            Penurunan tajam Januari &rarr; Februari (-43%) diikuti kenaikan Mar&ndash;Apr (+55%),
+            lalu kembali turun Mei (-16%). Pola <strong>reactive restocking</strong>, bukan proaktif.
           </p>
         </div>
 
-        <h3 style="margin-top: 32px;">Tabel Nilai Stok per Periode</h3>
-        <div class="table-wrap">
+        <div class="table-wrap" style="margin-top: 24px;">
           <table class="data">
             <thead>
-              <tr>
-                <th>Periode</th>
-                <th class="num-cell">Jumlah Item</th>
-                <th class="num-cell">Nilai Stok</th>
-                <th class="num-cell">Perubahan</th>
-              </tr>
+              <tr><th>Periode</th><th class="num-cell">Jumlah Item</th><th class="num-cell">Nilai Stok</th><th class="num-cell">Perubahan</th></tr>
             </thead>
             <tbody>
               <tr><td>Awal Jan 2026</td><td class="num-cell">61</td><td class="num-cell">Rp 231.834.746</td><td class="num-cell">&mdash;</td></tr>
@@ -128,9 +143,7 @@
           </div>
           <div class="table-wrap" style="margin-top: 0;">
             <table class="data">
-              <thead>
-                <tr><th>Kategori</th><th class="num-cell">Nilai Stok</th><th class="num-cell">%</th></tr>
-              </thead>
+              <thead><tr><th>Kategori</th><th class="num-cell">Nilai Stok</th><th class="num-cell">%</th></tr></thead>
               <tbody>
                 <tr><td>Rapid Test Kit</td><td class="num-cell">Rp 121.727.362</td><td class="num-cell">60.7%</td></tr>
                 <tr><td>Other / Misc</td><td class="num-cell">Rp 24.509.100</td><td class="num-cell">12.2%</td></tr>
@@ -140,9 +153,7 @@
                 <tr><td>General Consumables</td><td class="num-cell">Rp 3.743.165</td><td class="num-cell">1.9%</td></tr>
                 <tr><td>PPE / Safety</td><td class="num-cell">Rp 580.500</td><td class="num-cell">0.3%</td></tr>
                 <tr><td>Equipment / Misc</td><td class="num-cell">Rp 200.000</td><td class="num-cell">0.1%</td></tr>
-                <tr style="background: var(--section-alt); font-weight: 700;">
-                  <td>TOTAL</td><td class="num-cell">Rp 200.474.152</td><td class="num-cell">100%</td>
-                </tr>
+                <tr style="background: var(--section-alt); font-weight: 700;"><td>TOTAL</td><td class="num-cell">Rp 200.474.152</td><td class="num-cell">100%</td></tr>
               </tbody>
             </table>
           </div>
@@ -168,7 +179,7 @@
             <div class="risk-badge">KRITIS</div>
             <h3>Tidak Ada Tracking Kadaluarsa</h3>
             <p>60.7% inventory adalah Rapid Test Kit dengan shelf-life 12&ndash;24 bulan. Tidak ada kolom expiry date di sistem pencatatan saat ini.</p>
-            <p class="risk-impact"><strong>Dampak:</strong> Kerugian finansial langsung + risiko reputasi & legal jika produk kadaluarsa terjual ke fasilitas kesehatan.</p>
+            <p class="risk-impact"><strong>Dampak:</strong> Kerugian finansial langsung + risiko reputasi &amp; legal jika produk kadaluarsa terjual ke faskes.</p>
           </div>
 
           <div class="risk-card risk-med">
@@ -181,8 +192,8 @@
           <div class="risk-card risk-med">
             <div class="risk-badge">TINGGI</div>
             <h3>Ketergantungan pada 1 Orang</h3>
-            <p>Seluruh akuisisi klien bergantung pada 1 orang (CEO) melalui jaringan personal. Tidak ada CRM atau database pelanggan.</p>
-            <p class="risk-impact"><strong>Dampak:</strong> Bisnis rentan jika CEO tidak available. Tidak ada continuity plan.</p>
+            <p>Seluruh akuisisi klien bergantung pada 1 orang melalui jaringan personal. Tidak ada CRM atau database pelanggan.</p>
+            <p class="risk-impact"><strong>Dampak:</strong> Bisnis rentan jika decision maker tidak available. Tidak ada continuity plan.</p>
           </div>
 
           <div class="risk-card risk-low">
@@ -198,7 +209,7 @@
     <!-- 5. Solusi & Roadmap -->
     <section>
       <div class="container">
-        <div class="section-label">05 &middot; Solusi & Roadmap</div>
+        <div class="section-label">05 &middot; Solusi &amp; Roadmap</div>
         <h2>Rencana Implementasi Bertahap</h2>
         <p class="lead">
           Pendekatan bertahap menurunkan risiko kegagalan dan memungkinkan evaluasi ROI
@@ -216,9 +227,9 @@
               <li><strong>Alert kadaluarsa</strong> 30 hari sebelum expiry (kritis untuk Rapid Test Kit)</li>
               <li><strong>Alert stok minimum</strong> (reorder point) per item</li>
               <li>Dashboard stok real-time: nilai total, item low-stock, item expired-soon</li>
-              <li>Laporan PDF mingguan otomatis (stok masuk, keluar, kadaluarsa)</li>
+              <li>Laporan PDF mingguan otomatis</li>
             </ul>
-            <p class="phase-price">Estimasi investasi: <strong>Rp 2.500.000&ndash;3.000.000</strong></p>
+            <p class="phase-price">Estimasi: <strong>Rp 2.500.000&ndash;3.000.000</strong></p>
           </div>
 
           <div class="phase">
@@ -228,11 +239,11 @@
             </div>
             <ul>
               <li>Website company profile dengan katalog produk interaktif</li>
-              <li>Search & filter produk by kategori (Rapid Test, Lab Consumables, dll)</li>
+              <li>Search &amp; filter produk by kategori</li>
               <li>Form inquiry terintegrasi WhatsApp/email</li>
               <li>Mobile-responsive untuk akses klien di RS/klinik</li>
             </ul>
-            <p class="phase-price">Estimasi investasi: <strong>Rp 1.000.000&ndash;1.500.000</strong></p>
+            <p class="phase-price">Estimasi: <strong>Rp 1.000.000&ndash;1.500.000</strong></p>
           </div>
 
           <div class="phase">
@@ -245,59 +256,35 @@
               <li>Pipeline lead: Inquiry &rarr; Quotation &rarr; PO &rarr; Delivery</li>
               <li>Reminder follow-up otomatis</li>
               <li>Dashboard: top customer, penjualan per periode, produk terlaris</li>
-              <li>Multi-user support (CEO + staff)</li>
+              <li>Multi-user support</li>
             </ul>
-            <p class="phase-price">Estimasi investasi: <strong>Rp 2.000.000&ndash;3.000.000</strong></p>
+            <p class="phase-price">Estimasi: <strong>Rp 2.000.000&ndash;3.000.000</strong></p>
           </div>
 
           <div class="phase phase-optional">
             <div class="phase-head">
-              <span class="phase-tag">FASE 4 &middot; Integrasi & Otomatisasi (Opsional)</span>
+              <span class="phase-tag">FASE 4 &middot; Integrasi &amp; Otomatisasi (Opsional)</span>
               <span class="phase-time">Menyusul</span>
             </div>
             <ul>
               <li>Auto-generate PO ke supplier saat stok menyentuh reorder point</li>
-              <li>Integrasi dengan sistem akuntansi (laporan keuangan otomatis)</li>
               <li>Prediksi permintaan dengan machine learning (demand forecasting)</li>
-              <li>WhatsApp API untuk notifikasi ke klien & supplier</li>
+              <li>WhatsApp API untuk notifikasi ke klien &amp; supplier</li>
             </ul>
-            <p class="phase-price">Investasi: Sesuai scope yang disepakati</p>
+            <p class="phase-price">Investasi: Sesuai scope</p>
           </div>
         </div>
 
         <div class="callout roi-callout" style="margin-top: 32px;">
           <h3>&#128176; Proyeksi ROI</h3>
           <table class="data" style="margin-top: 12px;">
-            <thead>
-              <tr><th>Metrik</th><th class="num-cell">Tanpa Sistem</th><th class="num-cell">Dengan Sistem</th><th class="num-cell">Hemat/Tahun</th></tr>
-            </thead>
+            <thead><tr><th>Metrik</th><th class="num-cell">Tanpa Sistem</th><th class="num-cell">Dengan Sistem</th><th class="num-cell">Hemat/Tahun</th></tr></thead>
             <tbody>
-              <tr>
-                <td>Kerugian dari stockout (25% rate)</td>
-                <td class="num-cell">Rp 18.000.000</td>
-                <td class="num-cell">Rp 3.600.000</td>
-                <td class="num-cell" style="color:#2a9d45;"><strong>Rp 14.400.000</strong></td>
-              </tr>
-              <tr>
-                <td>Kerugian produk kadaluarsa (estimasi 5%)</td>
-                <td class="num-cell">Rp 12.000.000</td>
-                <td class="num-cell">Rp 1.200.000</td>
-                <td class="num-cell" style="color:#2a9d45;"><strong>Rp 10.800.000</strong></td>
-              </tr>
-              <tr style="background: var(--section-alt); font-weight: 700;">
-                <td>TOTAL HEMAT PER TAHUN</td>
-                <td class="num-cell">Rp 30.000.000</td>
-                <td class="num-cell">Rp 4.800.000</td>
-                <td class="num-cell" style="color:#2a9d45;"><strong>Rp 25.200.000</strong></td>
-              </tr>
-              <tr style="font-weight: 700;">
-                <td colspan="3">Total Investasi Sistem (Fase 1&ndash;3)</td>
-                <td class="num-cell" style="color:#14315a;"><strong>Rp 5.500.000&ndash;7.500.000</strong></td>
-              </tr>
-              <tr style="font-weight: 700;">
-                <td colspan="3"><strong>Payback Period</strong></td>
-                <td class="num-cell" style="color:#2a9d45;"><strong>&lt; 4 bulan</strong></td>
-              </tr>
+              <tr><td>Kerugian stockout (25% rate)</td><td class="num-cell">Rp 18.000.000</td><td class="num-cell">Rp 3.600.000</td><td class="num-cell" style="color:#2a9d45;"><strong>Rp 14.400.000</strong></td></tr>
+              <tr><td>Kerugian kadaluarsa (5%)</td><td class="num-cell">Rp 12.000.000</td><td class="num-cell">Rp 1.200.000</td><td class="num-cell" style="color:#2a9d45;"><strong>Rp 10.800.000</strong></td></tr>
+              <tr style="background: var(--section-alt); font-weight: 700;"><td>TOTAL HEMAT PER TAHUN</td><td class="num-cell">Rp 30.000.000</td><td class="num-cell">Rp 4.800.000</td><td class="num-cell" style="color:#2a9d45;"><strong>Rp 25.200.000</strong></td></tr>
+              <tr style="font-weight: 700;"><td colspan="3">Total Investasi (Fase 1&ndash;3)</td><td class="num-cell" style="color:#14315a;"><strong>Rp 5.500.000&ndash;7.500.000</strong></td></tr>
+              <tr style="font-weight: 700;"><td colspan="3"><strong>Payback Period</strong></td><td class="num-cell" style="color:#2a9d45;"><strong>&lt; 4 bulan</strong></td></tr>
             </tbody>
           </table>
         </div>
@@ -327,27 +314,20 @@
             </ul>
           </div>
         </div>
-        <div class="callout transparency" style="margin-top: 20px;">
-          <p class="mb-0">
-            <strong>Transparansi:</strong> Klaim finansial (omset) dan status legal tertentu dalam analisis ini
-            bersumber dari pihak internal perusahaan dan belum diverifikasi independen. Data stok dan komposisi
-            produk telah diverifikasi langsung dari file internal.
-          </p>
-        </div>
       </div>
     </section>
 
-    <!-- 7. CTA -->
+    <!-- 7. CTA + Kontak -->
     <section>
       <div class="container" style="text-align: center;">
-        <h2>Tertarik dengan Analisis Serupa?</h2>
+        <h2>Tertarik dengan Solusi Serupa?</h2>
         <p class="lead" style="max-width: 600px; margin: 0 auto;">
-          Saya membantu bisnis UMKM mengevaluasi operasional mereka dan merancang solusi digital
+          Saya membantu bisnis UMKM mengevaluasi operasional dan merancang solusi digital
           yang tepat guna &mdash; berbasis data, bertahap, dan transparan.
         </p>
         <div class="btn-row" style="justify-content: center; margin-top: 24px;">
-          <a href="tentang.html" class="btn btn-primary">Lihat Profil Saya &rarr;</a>
-          <a href="mailto:putraavaar@gmail.com" class="btn btn-ghost">Email Saya</a>
+          <a href="tentang.html" class="btn btn-primary">Lihat Profil Lengkap &rarr;</a>
+          <a href="https://wa.me/6282125410825" class="btn btn-ghost" target="_blank">WhatsApp Saya</a>
         </div>
       </div>
     </section>
@@ -355,24 +335,19 @@
 
   <footer class="site-footer">
     <div class="container foot-grid">
-      <div>
-        <strong style="color:#fff;">Avatar Putra Sigit</strong><br />
-        Data Analyst &amp; Python Developer &middot; AI/ML Engineer
-      </div>
+      <div><strong style="color:#fff;">Avatar Putra Sigit</strong><br />Data Analyst &amp; Python Developer &middot; AI/ML Engineer</div>
       <div>
         <a href="index.html">Beranda</a> &nbsp;&middot;&nbsp;
         <a href="tentang.html">Tentang</a> &nbsp;&middot;&nbsp;
-        <a href="studi-kasus-wbs.html">Studi Kasus</a>
+        <a href="studi-kasus-wbs.html">Studi Kasus PT WBS</a>
       </div>
     </div>
   </footer>
 
   <script>
-    // Chart 1: Nilai Stok per Periode
     (function () {
       var ctx = document.getElementById('stokChart');
       if (!ctx || typeof Chart === 'undefined') return;
-
       new Chart(ctx, {
         type: 'bar',
         data: {
@@ -380,86 +355,26 @@
           datasets: [{
             label: 'Nilai Stok (Rp juta)',
             data: [231.8, 225.9, 128.3, 199.0, 238.5, 200.5],
-            backgroundColor: [
-              'rgba(20,49,90,0.8)',
-              'rgba(20,49,90,0.8)',
-              'rgba(217,64,64,0.85)',  // highlight drop
-              'rgba(20,49,90,0.8)',
-              'rgba(20,49,90,0.8)',
-              'rgba(217,64,64,0.85)'   // highlight drop
-            ],
-            borderColor: '#14315a',
-            borderWidth: 1,
-            borderRadius: 4
+            backgroundColor: ['rgba(20,49,90,0.8)','rgba(20,49,90,0.8)','rgba(217,64,64,0.85)','rgba(20,49,90,0.8)','rgba(20,49,90,0.8)','rgba(217,64,64,0.85)'],
+            borderColor: '#14315a', borderWidth: 1, borderRadius: 4
           }]
         },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          plugins: {
-            legend: { display: false },
-            tooltip: {
-              callbacks: {
-                label: function(ctx) {
-                  return 'Rp ' + ctx.parsed.y.toFixed(1) + ' juta';
-                }
-              }
-            }
-          },
-          scales: {
-            y: {
-              beginAtZero: true,
-              ticks: {
-                callback: function(v) { return 'Rp ' + v + ' jt'; }
-              }
-            }
-          }
-        }
+        options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false }, tooltip: { callbacks: { label: function(ctx) { return 'Rp ' + ctx.parsed.y.toFixed(1) + ' juta'; } } } }, scales: { y: { beginAtZero: true, ticks: { callback: function(v) { return 'Rp ' + v + ' jt'; } } } } }
       });
     })();
 
-    // Chart 2: Komposisi Kategori (Doughnut)
     (function () {
       var ctx = document.getElementById('kategoriChart');
       if (!ctx || typeof Chart === 'undefined') return;
-
       new Chart(ctx, {
         type: 'doughnut',
         data: {
           labels: ['Rapid Test Kit', 'Lab Equipment', 'Lab Consumables', 'Blood Bank', 'Lainnya'],
-          datasets: [{
-            data: [60.7, 10.8, 8.0, 6.0, 14.5],
-            backgroundColor: [
-              '#14315a',
-              '#2a5a9e',
-              '#c9a227',
-              '#7cb342',
-              '#bdbdbd'
-            ],
-            borderWidth: 2,
-            borderColor: '#fff'
-          }]
+          datasets: [{ data: [60.7, 10.8, 8.0, 6.0, 14.5], backgroundColor: ['#14315a','#2a5a9e','#c9a227','#7cb342','#bdbdbd'], borderWidth: 2, borderColor: '#fff' }]
         },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          plugins: {
-            legend: {
-              position: 'bottom',
-              labels: { padding: 16, font: { size: 12 } }
-            },
-            tooltip: {
-              callbacks: {
-                label: function(ctx) {
-                  return ctx.label + ': ' + ctx.parsed + '%';
-                }
-              }
-            }
-          }
-        }
+        options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom', labels: { padding: 16, font: { size: 12 } } }, tooltip: { callbacks: { label: function(ctx) { return ctx.label + ': ' + ctx.parsed + '%'; } } } } }
       });
     })();
   </script>
-
 </body>
 </html>
